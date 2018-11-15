@@ -19,6 +19,18 @@ class Game:
         else:
             self.brickManager.generate_bricks_from_xml("Level1.xml")
 
+        self.frame = self.create_frame()
+
+    def create_frame(self):
+        left, top = self.brickManager.get_topleft_corner()
+        right, bottom = self.brickManager.get_bottomright_corner()
+        width = right - left
+        frame = pygame.Rect(left - self.FRAME_SIZE,
+                            top - self.FRAME_SIZE,
+                            width + 2*self.FRAME_SIZE,
+                            self.resolution[1])
+        return frame
+
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -39,6 +51,7 @@ class Game:
         # END TEMPORARY
 
         self.screen.fill(pygame.Color("grey"))
+        pygame.draw.rect(self.screen, pygame.Color("grey60"), self.frame, self.FRAME_SIZE)
         for brick in self.brickManager.bricks:
             if brick.type != BrickTypes.DESTROYED:
                 pygame.draw.rect(self.screen, brick.color, brick.rect)
@@ -57,3 +70,4 @@ class Game:
                     pygame.K_RIGHT: pygame.Vector2(1, 0),
                     pygame.K_UP: pygame.Vector2(0, -1),
                     pygame.K_DOWN: pygame.Vector2(0, 1)}
+    FRAME_SIZE = 5

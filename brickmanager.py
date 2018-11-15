@@ -51,3 +51,9 @@ class BrickManager:
 
             for parsed_brick in parsed_bricks:
                 self.append_brick(parsed_brick[1], parsed_brick[0], parsed_brick[2])
+
+    def get_bottomright_corner(self):
+        return max(brick.rect.bottomright for brick in self.bricks)
+
+    def get_topleft_corner(self):
+        return min(brick.rect.topleft for brick in self.bricks)
