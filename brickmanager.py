@@ -10,9 +10,9 @@ class BrickManager:
     brick_height = None
     bricks = []
 
-    def __init__(self, width, height):
-        self.screen_width = width
-        self.screen_height = height
+    def __init__(self, resolution):
+        self.screen_width = resolution[0]
+        self.screen_height = resolution[1]
 
     def initialize_brick_size(self, columns, rows):
         self.brick_width = int((self.screen_width - 2*self.SCREEN_MARGIN - (columns+1)*self.BRICK_DISTANCE) / columns)

@@ -5,18 +5,19 @@ from brick import BrickTypes
 
 
 class Game:
-    def __init__(self, width, height):
-        self.screen_width = width
-        self.screen_height = height
+    def __init__(self, resolution, random_level):
+        self.resolution = resolution
 
         pygame.init()
         pygame.display.set_caption("*** pyNoid ***")
 
-        self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        self.screen = pygame.display.set_mode(resolution)
         self.clock = pygame.time.Clock()
-        self.brickManager = BrickManager(self.screen_width, self.screen_height)
-        # self.brickManager.generate_random_bricks(20, 10)
-        self.brickManager.generate_bricks_from_xml("Level1.xml")
+        self.brickManager = BrickManager(resolution)
+        if random_level:
+            self.brickManager.generate_random_bricks(20, 10)
+        else:
+            self.brickManager.generate_bricks_from_xml("Level1.xml")
 
     def handle_events(self):
         for event in pygame.event.get():
