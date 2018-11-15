@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Level id="1">
+  <Rows>
+
+    <Row id="0">
+      <Blocks>
+        <Block column="0" type="1" />
+        <Block column="1" type="2" />
+        <Block column="2" type="1" />
+        <Block column="3" type="2" />
+        <Block column="4" type="1" />
+        <Block column="5" type="2" />
+        <Block column="6" type="1" />
+        <Block column="7" type="2" />
+        <Block column="8" type="1" />
+        <Block column="9" type="2" />
+        <Block column="10" type="1" />
+        <Block column="11" type="2" />
+        <Block column="12" type="1" />
+        <Block column="13" type="2" />
+        <Block column="14" type="1" />
+        <Block column="15" type="2" />
+        <Block column="16" type="1" />
+        <Block column="17" type="2" />
+        <Block column="18" type="1" />
+        <Block column="19" type="2" />
+      </Blocks>
+    </Row>
+
+    <Row id="1">
+      <Blocks>
+        <Block column="0" type="2" />
+        <Block column="1" type="1" />
+        <Block column="2" type="2" />
+        <Block column="3" type="1" />
+        <Block column="4" type="2" />
+        <Block column="5" type="1" />
+        <Block column="6" type="2" />
+        <Block column="7" type="1" />
+        <Block column="8" type="2" />
+        <Block column="9" type="1" />
+        <Block column="10" type="2" />
+        <Block column="11" type="1" />
+        <Block column="12" type="2" />
+        <Block column="13" type="1" />
+        <Block column="14" type="2" />
+        <Block column="15" type="1" />
+        <Block column="16" type="2" />
+        <Block column="17" type="1" />
+        <Block column="18" type="2" />
+        <Block column="19" type="1" />
+      </Blocks>
+    </Row>
+
+    <Row id="2">
+      <Blocks>
+        <Block column="0" type="1" />
+        <Block column="1" type="2" />
+        <Block column="2" type="1" />
+        <Block column="3" type="2" />
+        <Block column="4" type="1" />
+        <Block column="5" type="2" />
+        <Block column="6" type="1" />
+        <Block column="7" type="2" />
+        <Block column="8" type="100" />
+        <Block column="9" type="2" />
+        <Block column="10" type="1" />
+        <Block column="11" type="100" />
+        <Block column="12" type="1" />
+        <Block column="13" type="2" />
+        <Block column="14" type="1" />
+        <Block column="15" type="2" />
+        <Block column="16" type="1" />
+        <Block column="17" type="2" />
+        <Block column="18" type="1" />
+        <Block column="19" type="2" />
+      </Blocks>
+    </Row>
+
+    <Row id="3">
+      <Blocks>
+        <Block column="0" type="2" />
+        <Block column="1" type="1" />
+        <Block column="2" type="2" />
+        <Block column="3" type="1" />
+        <Block column="4" type="2" />
+        <Block column="5" type="1" />
+        <Block column="6" type="2" />
+        <Block column="7" type="1" />
+        <Block column="8" type="2" />
+        <Block column="9" type="1" />
+        <Block column="10" type="2" />
+        <Block column="11" type="1" />
+        <Block column="12" type="2" />
+        <Block column="13" type="1" />
+        <Block column="14" type="2" />
+        <Block column="15" type="1" />
+        <Block column="16" type="2" />
+        <Block column="17" type="1" />
+        <Block column="18" type="2" />
+        <Block column="19" type="1" />
+      </Blocks>
+    </Row>
+
+    <Row id="4">
+      <Blocks>
+        <Block column="0" type="1" />
+        <Block column="1" type="2" />
+        <Block column="2" type="1" />
+        <Block column="3" type="2" />
+        <Block column="4" type="1" />
+        <Block column="5" type="2" />
+        <Block column="6" type="1" />
+        <Block column="7" type="2" />
+        <Block column="8" type="1" />
+        <Block column="9" type="2" />
+        <Block column="10" type="1" />
+        <Block column="11" type="2" />
+        <Block column="12" type="1" />
+        <Block column="13" type="2" />
+        <Block column="14" type="1" />
+        <Block column="15" type="2" />
+        <Block column="16" type="1" />
+        <Block column="17" type="2" />
+        <Block column="18" type="1" />
+        <Block column="19" type="2" />
+      </Blocks>
+    </Row>
+
+    <Row id="5">
+      <Blocks>
+        <Block column="0" type="2" />
+        <Block column="1" type="1" />
+        <Block column="2" type="2" />
+        <Block column="3" type="1" />
+        <Block column="4" type="2" />
+        <Block column="5" type="1" />
+        <Block column="6" type="2" />
+        <Block column="7" type="100" />
+        <Block column="8" type="2" />
+        <Block column="9" type="1" />
+        <Block column="10" type="2" />
+        <Block column="11" type="1" />
+        <Block column="12" type="100" />
+        <Block column="13" type="1" />
+        <Block column="14" type="2" />
+        <Block column="15" type="1" />
+        <Block column="16" type="2" />
+        <Block column="17" type="1" />
+        <Block column="18" type="2" />
+        <Block column="19" type="1" />
+      </Blocks>
+    </Row>
+
+    <Row id="6">
+      <Blocks>
+        <Block column="0" type="1" />
+        <Block column="1" type="2" />
+        <Block column="2" type="1" />
+        <Block column="3" type="2" />
+        <Block column="4" type="1" />
+        <Block column="5" type="2" />
+        <Block column="6" type="1" />
+        <Block column="7" type="100" />
+        <Block column="8" type="1" />
+        <Block column="9" type="2" />
+        <Block column="10" type="1" />
+        <Block column="11" type="2" />
+        <Block column="12" type="100" />
+        <Block column="13" type="2" />
+        <Block column="14" type="1" />
+        <Block column="15" type="2" />
+        <Block column="16" type="1" />
+        <Block column="17" type="2" />
+        <Block column="18" type="1" />
+        <Block column="19" type="2" />
+      </Blocks>
+    </Row>
+
+    <Row id="7">
+      <Blocks>
+        <Block column="0" type="2" />
+        <Block column="1" type="1" />
+        <Block column="2" type="2" />
+        <Block column="3" type="1" />
+        <Block column="4" type="2" />
+        <Block column="5" type="1" />
+        <Block column="6" type="2" />
+        <Block column="7" type="1" />
+        <Block column="8" type="100" />
+        <Block column="9" type="100" />
+        <Block column="10" type="100" />
+        <Block column="11" type="100" />
+        <Block column="12" type="2" />
+        <Block column="13" type="1" />
+        <Block column="14" type="2" />
+        <Block column="15" type="1" />
+        <Block column="16" type="2" />
+        <Block column="17" type="1" />
+        <Block column="18" type="2" />
+        <Block column="19" type="1" />
+      </Blocks>
+    </Row>
+
+    <Row id="8">
+      <Blocks>
+        <Block column="0" type="1" />
+        <Block column="1" type="2" />
+        <Block column="2" type="1" />
+        <Block column="3" type="2" />
+        <Block column="4" type="1" />
+        <Block column="5" type="2" />
+        <Block column="6" type="1" />
+        <Block column="7" type="2" />
+        <Block column="8" type="1" />
+        <Block column="9" type="2" />
+        <Block column="10" type="1" />
+        <Block column="11" type="2" />
+        <Block column="12" type="1" />
+        <Block column="13" type="2" />
+        <Block column="14" type="1" />
+        <Block column="15" type="2" />
+        <Block column="16" type="1" />
+        <Block column="17" type="2" />
+        <Block column="18" type="1" />
+        <Block column="19" type="2" />
+      </Blocks>
+    </Row>
+
+    <Row id="9">
+      <Blocks>
+        <Block column="0" type="2" />
+        <Block column="1" type="1" />
+        <Block column="2" type="2" />
+        <Block column="3" type="1" />
+        <Block column="4" type="2" />
+        <Block column="5" type="1" />
+        <Block column="6" type="2" />
+        <Block column="7" type="1" />
+        <Block column="8" type="2" />
+        <Block column="9" type="1" />
+        <Block column="10" type="2" />
+        <Block column="11" type="1" />
+        <Block column="12" type="2" />
+        <Block column="13" type="1" />
+        <Block column="14" type="2" />
+        <Block column="15" type="1" />
+        <Block column="16" type="2" />
+        <Block column="17" type="1" />
+        <Block column="18" type="2" />
+        <Block column="19" type="1" />
+      </Blocks>
+    </Row>
+
+  </Rows>
+</Level>
