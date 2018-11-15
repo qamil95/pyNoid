@@ -10,9 +10,13 @@ class BrickManager:
     brick_height = None
     bricks = []
 
-    def __init__(self, resolution):
+    def __init__(self, resolution, random_level):
         self.screen_width = resolution[0]
         self.screen_height = resolution[1]
+        if random_level:
+            self.generate_random_bricks(20, 10)
+        else:
+            self.generate_bricks_from_xml("Level1.xml")
 
     def initialize_brick_size(self, columns, rows):
         self.brick_width = int((self.screen_width - 2*self.SCREEN_MARGIN - (columns+1)*self.BRICK_DISTANCE) / columns)
