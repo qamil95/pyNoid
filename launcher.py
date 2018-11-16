@@ -1,5 +1,8 @@
+import constants
+
+
 def print_title():
-    title = "***** pyNoid *****"
+    title = f"**{constants.WINDOW_TITLE}**"
     print('*' * len(title))
     print(title)
     print('*' * len(title))
@@ -20,8 +23,8 @@ class Launcher:
         try:
             self.resolution = (int(width), int(height))
         except ValueError:
-            print("Wrong values, using default 1280x720")
-            self.resolution = (1280, 720)
+            print(f"Wrong values, using default resolution {constants.DEFAULT_RESOLUTION}")
+            self.resolution = constants.DEFAULT_RESOLUTION
 
     def set_level(self):
         level = input("1 - random level, 2 - level from xml: ")

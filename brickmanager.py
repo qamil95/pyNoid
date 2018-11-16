@@ -1,11 +1,10 @@
 import random
 import xmltodict
+import constants
 from brick import Brick
 
 
 class BrickManager:
-    BRICK_DISTANCE = 1
-    SCREEN_MARGIN = 20
     brick_width = None
     brick_height = None
     bricks = []
@@ -19,12 +18,14 @@ class BrickManager:
             self.generate_bricks_from_xml("Level1.xml")
 
     def initialize_brick_size(self, columns, rows):
-        self.brick_width = int((self.screen_width - 2*self.SCREEN_MARGIN - (columns+1)*self.BRICK_DISTANCE) / columns)
-        self.brick_height = int(((self.screen_height / 3) - self.SCREEN_MARGIN - (rows+1)*self.BRICK_DISTANCE) / rows)
+        width = (self.screen_width - 2*constants.SCREEN_MARGIN - (columns+1)*constants.BRICK_DISTANCE) / columns
+        height = ((self.screen_height / 3) - constants.SCREEN_MARGIN - (rows+1)*constants.BRICK_DISTANCE) / rows
+        self.brick_width = int(width)
+        self.brick_height = int(height)
 
     def append_brick(self, column, row, type_id):
-        self.bricks.append(Brick(self.SCREEN_MARGIN + column*(self.brick_width + self.BRICK_DISTANCE),
-                                 self.SCREEN_MARGIN + row*(self.brick_height + self.BRICK_DISTANCE),
+        self.bricks.append(Brick(constants.SCREEN_MARGIN + column*(self.brick_width + constants.BRICK_DISTANCE),
+                                 constants.SCREEN_MARGIN + row*(self.brick_height + constants.BRICK_DISTANCE),
                                  self.brick_width,
                                  self.brick_height,
                                  type_id))
