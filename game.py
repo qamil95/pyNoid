@@ -17,7 +17,7 @@ class Game:
 
         self.brickManager = BrickManager(resolution, random_level)
         self.border = self.create_border()
-        self.player = pygame.Rect(resolution[0]/2, resolution[1]/2, 200, 50)
+        self.player = pygame.Rect(resolution[0] / 2, resolution[1] / 2, 200, 50)
         self.ball = pygame.Rect(100, 100, 20, 20)
 
     def create_border(self):
@@ -26,7 +26,7 @@ class Game:
         width = right - left
         return pygame.Rect(left - constants.BORDER_WIDTH,
                            top - constants.BORDER_WIDTH,
-                           width + 2*constants.BORDER_WIDTH,
+                           width + 2 * constants.BORDER_WIDTH,
                            self.resolution[1])
 
     def handle_events(self):
