@@ -7,7 +7,7 @@ from ball import Ball
 
 
 class Game:
-    def __init__(self, resolution, random_level):
+    def __init__(self, resolution, random_level, mouse_input):
         self.resolution = resolution
 
         pygame.init()
@@ -15,6 +15,7 @@ class Game:
 
         self.screen = pygame.display.set_mode(resolution)
         self.clock = pygame.time.Clock()
+        self.mouse_input = mouse_input
 
         self.brickManager = BrickManager(resolution, random_level)
         self.border = self.create_border()
@@ -35,16 +36,16 @@ class Game:
             if event.type == pygame.QUIT:
                 sys.exit(0)
 
-    def handle_keyboard(self):
-        pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_LEFT]:
-            self.player.x -= 3
-        elif pressed[pygame.K_RIGHT]:
-            self.player.x += 3
-
-    def handle_mouse(self):
-        x, _ = pygame.mouse.get_pos()
-        self.player.centerx = x
+    def handle_input(self):
+        if self.mouse_input:
+            x, _ = pygame.mouse.get_pos()
+            self.player.centerx = x
+        else:
+            pressed = pygame.key.get_pressed()
+            if pressed[pygame.K_LEFT]:
+                self.player.centerx -= 3
+            elif pressed[pygame.K_RIGHT]:
+                self.player.centerx += 3
 
     def calculate_state(self):
         for brick in self.brickManager.bricks:
@@ -65,7 +66,6 @@ class Game:
         while True:
             self.clock.tick(constants.FRAMES_PER_SECOND)
             self.handle_events()
-            self.handle_keyboard()
-            #self.handle_mouse()
+            self.handle_input()
             self.calculate_state()
             self.draw_screen()
