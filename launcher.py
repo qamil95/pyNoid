@@ -20,8 +20,8 @@ class Launcher:
         self.set_input_method()
 
     def set_resolution(self):
-        width = input(f"Screen width (default - {constants.DEFAULT_RESOLUTION[0])}: ")
-        height = input(f"Screen height(default - {constants.DEFAULT_RESOLUTION[1])}: ")
+        width = input(f"Screen width (default - {constants.DEFAULT_RESOLUTION[0]}): ")
+        height = input(f"Screen height(default - {constants.DEFAULT_RESOLUTION[1]}): ")
         try:
             self.resolution = (int(width), int(height))
         except ValueError:
