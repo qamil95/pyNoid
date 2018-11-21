@@ -20,8 +20,8 @@ class Launcher:
         self.set_input_method()
 
     def set_resolution(self):
-        width = input("Screen width: ")
-        height = input("Screen height: ")
+        width = input(f"Screen width (default - {constants.DEFAULT_RESOLUTION[0])}: ")
+        height = input(f"Screen height(default - {constants.DEFAULT_RESOLUTION[1])}: ")
         try:
             self.resolution = (int(width), int(height))
         except ValueError:
@@ -29,7 +29,7 @@ class Launcher:
             self.resolution = constants.DEFAULT_RESOLUTION
 
     def set_level(self):
-        level = input("1 - random level, 2 - level from xml: ")
+        level = input("1 - random level, 2 - level from xml (default - XML): ")
         if level == "1":
             self.random_level = True
         else:
@@ -37,7 +37,7 @@ class Launcher:
         print(">>> " + ("Random" if self.random_level else "XML") + " level would be used")
 
     def set_input_method(self):
-        method = input("1 - mouse, 2 - keyboard: ")
+        method = input("1 - mouse, 2 - keyboard (default - keyboard): ")
         if method == "1":
             self.mouse_input = True
         else:
