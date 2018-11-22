@@ -35,6 +35,15 @@ class Ball:
                     self.check_collision_axis(brick.rect)
                     brick.type = BrickTypes.DESTROYED
 
+    def check_paddle_collision(self, paddle: pygame.Rect):
+        if paddle.colliderect(self.rect):
+            self.collision_y = True
+
+            if self.rect.centerx > paddle.centerx:
+                self.movement.x = abs(self.movement.x)
+            else:
+                self.movement.x = -abs(self.movement.x)
+
     def bounce(self):
         if self.collision_x:
             self.movement.x *= -1

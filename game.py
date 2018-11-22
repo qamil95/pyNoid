@@ -50,6 +50,7 @@ class Game:
     def calculate_state(self):
         self.ball.update_position()
         self.ball.check_brick_collision(self.brickManager.bricks)
+        self.ball.check_paddle_collision(self.player)
         self.ball.bounce()
 
     def draw_screen(self):
