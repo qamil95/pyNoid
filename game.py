@@ -48,18 +48,9 @@ class Game:
                 self.player.centerx += 3
 
     def calculate_state(self):
-        collision_x = False
-        collision_y = False
-
         self.ball.update_position()
-        for brick in self.brickManager.bricks:
-            if brick.rect.colliderect(self.ball.rect):
-                if brick.type != BrickTypes.DESTROYED:
-                    current_collision = self.ball.check_collision_axis(brick.rect)
-                    collision_x = collision_x or current_collision[0]
-                    collision_y = collision_y or current_collision[1]
-                    brick.type = BrickTypes.DESTROYED
-        self.ball.bounce(collision_x, collision_y)
+        self.ball.check_brick_collision(self.brickManager.bricks)
+        self.ball.bounce()
 
     def draw_screen(self):
         self.screen.fill(pygame.Color("grey"))

@@ -241,7 +241,7 @@
         <Block column="9" type="1" />
         <Block column="10" type="2" />
         <Block column="11" type="1" />
-        <Block column="12" type="2" />
+        <Block column="12" type="2" /> <!-- This is the first destroyed brick -->
         <Block column="13" type="1" />
         <Block column="14" type="2" />
         <Block column="15" type="1" />
