@@ -7,7 +7,7 @@ class Ball:
         self.rect = pygame.Rect(0, 0, width, height)
         self.rect.center = (x, y)
         self.position = pygame.Vector2(float(x), float(y))
-        self.movement = pygame.Vector2(3.0, -3.0)
+        self.movement = pygame.Vector2(5.0, -5.0)
         self.collision_x = False
         self.collision_y = False
 
@@ -43,6 +43,10 @@ class Ball:
                 self.movement.x = abs(self.movement.x)
             else:
                 self.movement.x = -abs(self.movement.x)
+
+    def check_border_collision(self, borders):
+        for border in borders:
+            self.check_collision_axis(border)
 
     def bounce(self):
         if self.collision_x:

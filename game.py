@@ -18,7 +18,7 @@ class Game:
         self.mouse_input = mouse_input
 
         self.brickManager = BrickManager(resolution, random_level)
-        self.border = self.create_border()
+        self.borders = self.create_border()
         self.player = pygame.Rect(resolution[0] / 2, resolution[1] - 100, 200, 50)
         self.ball = Ball(resolution[0] / 2, resolution[1] / 2, 20, 20)
 
@@ -26,10 +26,21 @@ class Game:
         left, top = self.brickManager.get_topleft_corner()
         right, bottom = self.brickManager.get_bottomright_corner()
         width = right - left
-        return pygame.Rect(left - constants.BORDER_WIDTH,
-                           top - constants.BORDER_WIDTH,
-                           width + 2 * constants.BORDER_WIDTH,
-                           self.resolution[1])
+        left_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
+                                  top - 2 * constants.BORDER_WIDTH,
+                                  constants.BORDER_WIDTH,
+                                  self.resolution[1]
+                                  )
+        top_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
+                                 top - 2 * constants.BORDER_WIDTH,
+                                 width + 4 * constants.BORDER_WIDTH,
+                                 constants.BORDER_WIDTH)
+        right_border = pygame.Rect(right + constants.BORDER_WIDTH,
+                                   top - constants.BORDER_WIDTH,
+                                   constants.BORDER_WIDTH,
+                                   self.resolution[1])
+
+        return [left_border, top_border, right_border]
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -51,11 +62,13 @@ class Game:
         self.ball.update_position()
         self.ball.check_brick_collision(self.brickManager.bricks)
         self.ball.check_paddle_collision(self.player)
+        self.ball.check_border_collision(self.borders)
         self.ball.bounce()
 
     def draw_screen(self):
         self.screen.fill(pygame.Color("grey"))
-        pygame.draw.rect(self.screen, pygame.Color("grey60"), self.border, constants.BORDER_WIDTH)
+        for border in self.borders:
+            pygame.draw.rect(self.screen, pygame.Color("grey60"), border)
         for brick in self.brickManager.bricks:
             if brick.type != BrickTypes.DESTROYED:
                 pygame.draw.rect(self.screen, brick.color, brick.rect)
