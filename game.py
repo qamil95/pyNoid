@@ -1,7 +1,7 @@
 import pygame
 import sys
 import constants
-from brickmanager import BrickManager
+from brick_manager import BrickManager
 from brick import BrickTypes
 from ball import Ball
 
