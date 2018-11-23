@@ -2,6 +2,7 @@
   <dictionary name="kzietek">
     <words>
       <w>bottomright</w>
+      <w>centerx</w>
       <w>topleft</w>
     </words>
   </dictionary>
