@@ -1,11 +1,22 @@
 import constants
 
 
+def get_frame(text):
+    return '*' * len(text)
+
+
 def print_title():
     title = f"**{constants.WINDOW_TITLE}**"
-    print('*' * len(title))
+    print(get_frame(title))
     print(title)
-    print('*' * len(title))
+    print(get_frame(title))
+
+
+def print_help():
+    help = "** Press space to start **"
+    print(get_frame(help))
+    print(help)
+    print(get_frame(help))
 
 
 class Launcher:
@@ -18,6 +29,7 @@ class Launcher:
         self.set_resolution()
         self.set_level()
         self.set_input_method()
+        print_help()
 
     def set_resolution(self):
         width = input(f"Screen width (default - {constants.DEFAULT_RESOLUTION[0]}): ")
