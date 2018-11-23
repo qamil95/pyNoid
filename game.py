@@ -49,6 +49,8 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit(0)
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                self.ball.start()
 
     def handle_input(self):
         if self.mouse_input:

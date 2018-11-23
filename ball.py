@@ -1,4 +1,6 @@
 import pygame
+import constants
+from math import isclose
 from brick import BrickTypes
 
 
@@ -7,21 +9,26 @@ class Ball:
         self.rect = pygame.Rect(0, 0, width, height)
         self.rect.center = (x, y)
         self.position = pygame.Vector2(float(x), float(y))
-        self.movement = pygame.Vector2(0.0, -7.0)
+        self.movement = pygame.Vector2()
         self.collision_x = False
         self.collision_y = False
+
+    def start(self, ball_speed=constants.START_BALL_SPEED):
+        if isclose(self.movement.length(), 0.0):
+            self.movement.y = -ball_speed
 
     def check_collision_axis(self, to_check: pygame.Rect):
         position = pygame.Vector2(self.position)
         ball = self.rect.copy()
+        collision_step = self.movement / constants.CHECK_COLLISION_STEPS
         while ball.colliderect(to_check):
-            position -= self.movement / 10
+            position -= collision_step
             ball.center = (int(position.x), int(position.y))
 
-        ball.center = (int(position.x + self.movement.x / 10), int(position.y))
+        ball.center = (int(position.x + collision_step.x), int(position.y))
         self.collision_x = self.collision_x or ball.colliderect(to_check)
 
-        ball.center = (int(position.x), int(position.y + self.movement.y / 10))
+        ball.center = (int(position.x), int(position.y + collision_step.y))
         self.collision_y = self.collision_y or ball.colliderect(to_check)
 
     def update_position(self):
@@ -39,7 +46,7 @@ class Ball:
         if paddle.colliderect(self.rect):
             distance = self.rect.centerx - paddle.centerx
             angle_ratio = distance / (paddle.w / 2)
-            new_angle = (angle_ratio * 60)
+            new_angle = (angle_ratio * constants.MAX_PADDLE_BOUNCE_ANGLE)
             self.movement.rotate_ip(self.movement.angle_to(pygame.Vector2(0, -1)) + new_angle)
 
     def check_border_collision(self, borders):
