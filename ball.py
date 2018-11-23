@@ -7,7 +7,7 @@ class Ball:
         self.rect = pygame.Rect(0, 0, width, height)
         self.rect.center = (x, y)
         self.position = pygame.Vector2(float(x), float(y))
-        self.movement = pygame.Vector2(5.0, -5.0)
+        self.movement = pygame.Vector2(0.0, -7.0)
         self.collision_x = False
         self.collision_y = False
 
@@ -37,12 +37,10 @@ class Ball:
 
     def check_paddle_collision(self, paddle: pygame.Rect):
         if paddle.colliderect(self.rect):
-            self.collision_y = True
-
-            if self.rect.centerx > paddle.centerx:
-                self.movement.x = abs(self.movement.x)
-            else:
-                self.movement.x = -abs(self.movement.x)
+            distance = self.rect.centerx - paddle.centerx
+            angle_ratio = distance / (paddle.w / 2)
+            new_angle = (angle_ratio * 60)
+            self.movement.rotate_ip(self.movement.angle_to(pygame.Vector2(0, -1)) + new_angle)
 
     def check_border_collision(self, borders):
         for border in borders:
