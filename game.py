@@ -29,7 +29,7 @@ class Game:
         left_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
                                   top - 2 * constants.BORDER_WIDTH,
                                   constants.BORDER_WIDTH,
-                                  self.resolution[1])
+                                  self.resolution[1] + constants.BOTTOM_BORDER_DISTANCE)
         top_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
                                  top - 2 * constants.BORDER_WIDTH,
                                  width + 4 * constants.BORDER_WIDTH,
@@ -37,9 +37,9 @@ class Game:
         right_border = pygame.Rect(right + constants.BORDER_WIDTH,
                                    top - constants.BORDER_WIDTH,
                                    constants.BORDER_WIDTH,
-                                   self.resolution[1])
+                                   self.resolution[1] + constants.BOTTOM_BORDER_DISTANCE)
         bottom_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
-                                    self.resolution[1] + 100,
+                                    self.resolution[1] + constants.BOTTOM_BORDER_DISTANCE,
                                     width + 4 * constants.BORDER_WIDTH,
                                     constants.BORDER_WIDTH)
 
