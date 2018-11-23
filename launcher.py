@@ -13,10 +13,10 @@ def print_title():
 
 
 def print_help():
-    help = "** Press space to start **"
-    print(get_frame(help))
-    print(help)
-    print(get_frame(help))
+    help_text = "** Press space to start **"
+    print(get_frame(help_text))
+    print(help_text)
+    print(get_frame(help_text))
 
 
 class Launcher:
