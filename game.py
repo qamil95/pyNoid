@@ -1,7 +1,7 @@
 import pygame
 import sys
 import constants
-from brick_manager import BrickManager
+from level_manager import LevelManager
 from brick import BrickTypes
 from ball import Ball
 from colors import pygame_colors, Colors
@@ -18,14 +18,14 @@ class Game:
         self.clock = pygame.time.Clock()
         self.mouse_input = mouse_input
 
-        self.brickManager = BrickManager(resolution, random_level)
+        self.level_manager = LevelManager(resolution, random_level)
         self.borders = self.create_border()
         self.player = pygame.Rect(resolution[0] / 2, resolution[1] - 100, 200, 50)
         self.ball = Ball(resolution[0] / 2, resolution[1] / 2, 20, 20)
 
     def create_border(self):
-        left, top = self.brickManager.get_topleft_corner()
-        right, bottom = self.brickManager.get_bottomright_corner()
+        left, top = self.level_manager.get_topleft_corner()
+        right, bottom = self.level_manager.get_bottomright_corner()
         width = right - left
         left_border = pygame.Rect(left - 2 * constants.BORDER_WIDTH,
                                   top - 2 * constants.BORDER_WIDTH,
@@ -66,7 +66,7 @@ class Game:
 
     def calculate_state(self):
         self.ball.update_position()
-        self.ball.check_brick_collision(self.brickManager.bricks)
+        self.ball.check_brick_collision(self.level_manager.bricks)
         self.ball.check_paddle_collision(self.player)
         self.ball.check_border_collision(self.borders)
         self.ball.bounce()
@@ -75,7 +75,7 @@ class Game:
         self.screen.fill(pygame_colors[Colors.LIGHT_GREY])
         for border in self.borders:
             pygame.draw.rect(self.screen, pygame_colors[Colors.GREY], border)
-        for brick in self.brickManager.bricks:
+        for brick in self.level_manager.bricks:
             if brick.type != BrickTypes.DESTROYED:
                 pygame.draw.rect(self.screen, brick.color, brick.rect)
         pygame.draw.rect(self.screen, pygame_colors[Colors.RED], self.player)

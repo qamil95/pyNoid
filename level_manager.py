@@ -4,7 +4,7 @@ import constants
 from brick import Brick
 
 
-class BrickManager:
+class LevelManager:
     brick_width = None
     brick_height = None
     bricks = []
