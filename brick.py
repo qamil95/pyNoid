@@ -6,8 +6,9 @@ from colors import pygame_colors, Colors
 class BrickTypes(Enum):
     DESTROYED = 0
     STANDARD = 1
-    ADDITIONAL_BALL = 3
-    SOLID = 100
+    STANDARD_OTHER_COLOR = 2  # For backward compatibility
+    ADDITIONAL_BALLS = 3  # Spawns two additional balls after hit
+    SOLID = 100  # Brick which is not destroyable
 
 
 class Brick:
