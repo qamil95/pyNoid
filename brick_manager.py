@@ -23,11 +23,12 @@ class BrickManager:
         self.brick_width = int(width)
         self.brick_height = int(height)
 
-    def append_brick(self, column, row, type_id):
+    def append_brick(self, column, row, color_id, type_id):
         self.bricks.append(Brick(constants.SCREEN_MARGIN + column * (self.brick_width + constants.BRICK_DISTANCE),
                                  constants.SCREEN_MARGIN + row * (self.brick_height + constants.BRICK_DISTANCE),
                                  self.brick_width,
                                  self.brick_height,
+                                 color_id,
                                  type_id))
 
     def generate_random_bricks(self, columns, rows):
@@ -46,8 +47,9 @@ class BrickManager:
                 blocks = row["Bricks"]
                 for block in blocks["Brick"]:
                     column_number = int(block["@column"])
-                    block_type = int(block["@type"])
-                    parsed_bricks.append((row_number, column_number, block_type))
+                    color_id = int(block.get("@color", 0))
+                    block_type = int(block.get("@type", 0))
+                    parsed_bricks.append((row_number, column_number, color_id, block_type))
 
             from operator import itemgetter
             max_row = max(parsed_bricks, key=itemgetter(0))[0]
@@ -55,7 +57,7 @@ class BrickManager:
             self.initialize_brick_size(max_column + 1, max_row + 1)
 
             for parsed_brick in parsed_bricks:
-                self.append_brick(parsed_brick[1], parsed_brick[0], parsed_brick[2])
+                self.append_brick(parsed_brick[1], parsed_brick[0], parsed_brick[2], parsed_brick[3])
 
     def get_bottomright_corner(self):
         return max(brick.rect.bottomright for brick in self.bricks)

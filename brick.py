@@ -5,17 +5,13 @@ from colors import pygame_colors, Colors
 
 class BrickTypes(Enum):
     DESTROYED = 0
-    LIGHT = 1
-    DARK = 2
+    STANDARD = 1
+    ADDITIONAL_BALL = 3
     SOLID = 100
 
 
 class Brick:
-    def __init__(self, x, y, width, height, type_id):
+    def __init__(self, x, y, width, height, color_id, type_id):
         self.rect = pygame.Rect(x, y, width, height)
         self.type = BrickTypes(type_id)
-        self.color = self.color[self.type]
-
-    color = {BrickTypes.LIGHT: pygame_colors[Colors.YELLOW],
-             BrickTypes.DARK: pygame_colors[Colors.ORANGE],
-             BrickTypes.SOLID: pygame_colors[Colors.BLUE]}
+        self.color = pygame_colors[Colors(color_id)]
