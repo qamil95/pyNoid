@@ -3,6 +3,7 @@
     <words>
       <w>bottomright</w>
       <w>centerx</w>
+      <w>pygame</w>
       <w>topleft</w>
     </words>
   </dictionary>
