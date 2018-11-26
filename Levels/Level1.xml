@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Level id="1">
+  <Rows>
+
+    <Row id="0">
+      <Bricks>
+        <Brick column="0" type="1" />
+        <Brick column="1" type="2" />
+        <Brick column="2" type="1" />
+        <Brick column="3" type="2" />
+        <Brick column="4" type="1" />
+        <Brick column="5" type="2" />
+        <Brick column="6" type="1" />
+        <Brick column="7" type="2" />
+        <Brick column="8" type="1" />
+        <Brick column="9" type="2" />
+        <Brick column="10" type="1" />
+        <Brick column="11" type="2" />
+        <Brick column="12" type="1" />
+        <Brick column="13" type="2" />
+        <Brick column="14" type="1" />
+        <Brick column="15" type="2" />
+        <Brick column="16" type="1" />
+        <Brick column="17" type="2" />
+        <Brick column="18" type="1" />
+        <Brick column="19" type="2" />
+      </Bricks>
+    </Row>
+
+    <Row id="1">
+      <Bricks>
+        <Brick column="0" type="2" />
+        <Brick column="1" type="1" />
+        <Brick column="2" type="2" />
+        <Brick column="3" type="1" />
+        <Brick column="4" type="2" />
+        <Brick column="5" type="1" />
+        <Brick column="6" type="2" />
+        <Brick column="7" type="1" />
+        <Brick column="8" type="2" />
+        <Brick column="9" type="1" />
+        <Brick column="10" type="2" />
+        <Brick column="11" type="1" />
+        <Brick column="12" type="2" />
+        <Brick column="13" type="1" />
+        <Brick column="14" type="2" />
+        <Brick column="15" type="1" />
+        <Brick column="16" type="2" />
+        <Brick column="17" type="1" />
+        <Brick column="18" type="2" />
+        <Brick column="19" type="1" />
+      </Bricks>
+    </Row>
+
+    <Row id="2">
+      <Bricks>
+        <Brick column="0" type="1" />
+        <Brick column="1" type="2" />
+        <Brick column="2" type="1" />
+        <Brick column="3" type="2" />
+        <Brick column="4" type="1" />
+        <Brick column="5" type="2" />
+        <Brick column="6" type="1" />
+        <Brick column="7" type="2" />
+        <Brick column="8" type="100" />
+        <Brick column="9" type="2" />
+        <Brick column="10" type="1" />
+        <Brick column="11" type="100" />
+        <Brick column="12" type="1" />
+        <Brick column="13" type="2" />
+        <Brick column="14" type="1" />
+        <Brick column="15" type="2" />
+        <Brick column="16" type="1" />
+        <Brick column="17" type="2" />
+        <Brick column="18" type="1" />
+        <Brick column="19" type="2" />
+      </Bricks>
+    </Row>
+
+    <Row id="3">
+      <Bricks>
+        <Brick column="0" type="2" />
+        <Brick column="1" type="1" />
+        <Brick column="2" type="2" />
+        <Brick column="3" type="1" />
+        <Brick column="4" type="2" />
+        <Brick column="5" type="1" />
+        <Brick column="6" type="2" />
+        <Brick column="7" type="1" />
+        <Brick column="8" type="2" />
+        <Brick column="9" type="1" />
+        <Brick column="10" type="2" />
+        <Brick column="11" type="1" />
+        <Brick column="12" type="2" />
+        <Brick column="13" type="1" />
+        <Brick column="14" type="2" />
+        <Brick column="15" type="1" />
+        <Brick column="16" type="2" />
+        <Brick column="17" type="1" />
+        <Brick column="18" type="2" />
+        <Brick column="19" type="1" />
+      </Bricks>
+    </Row>
+
+    <Row id="4">
+      <Bricks>
+        <Brick column="0" type="1" />
+        <Brick column="1" type="2" />
+        <Brick column="2" type="1" />
+        <Brick column="3" type="2" />
+        <Brick column="4" type="1" />
+        <Brick column="5" type="2" />
+        <Brick column="6" type="1" />
+        <Brick column="7" type="2" />
+        <Brick column="8" type="1" />
+        <Brick column="9" type="2" />
+        <Brick column="10" type="1" />
+        <Brick column="11" type="2" />
+        <Brick column="12" type="1" />
+        <Brick column="13" type="2" />
+        <Brick column="14" type="1" />
+        <Brick column="15" type="2" />
+        <Brick column="16" type="1" />
+        <Brick column="17" type="2" />
+        <Brick column="18" type="1" />
+        <Brick column="19" type="2" />
+      </Bricks>
+    </Row>
+
+    <Row id="5">
+      <Bricks>
+        <Brick column="0" type="2" />
+        <Brick column="1" type="1" />
+        <Brick column="2" type="2" />
+        <Brick column="3" type="1" />
+        <Brick column="4" type="2" />
+        <Brick column="5" type="1" />
+        <Brick column="6" type="2" />
+        <Brick column="7" type="100" />
+        <Brick column="8" type="2" />
+        <Brick column="9" type="1" />
+        <Brick column="10" type="2" />
+        <Brick column="11" type="1" />
+        <Brick column="12" type="100" />
+        <Brick column="13" type="1" />
+        <Brick column="14" type="2" />
+        <Brick column="15" type="1" />
+        <Brick column="16" type="2" />
+        <Brick column="17" type="1" />
+        <Brick column="18" type="2" />
+        <Brick column="19" type="1" />
+      </Bricks>
+    </Row>
+
+    <Row id="6">
+      <Bricks>
+        <Brick column="0" type="1" />
+        <Brick column="1" type="2" />
+        <Brick column="2" type="1" />
+        <Brick column="3" type="2" />
+        <Brick column="4" type="1" />
+        <Brick column="5" type="2" />
+        <Brick column="6" type="1" />
+        <Brick column="7" type="100" />
+        <Brick column="8" type="1" />
+        <Brick column="9" type="2" />
+        <Brick column="10" type="1" />
+        <Brick column="11" type="2" />
+        <Brick column="12" type="100" />
+        <Brick column="13" type="2" />
+        <Brick column="14" type="1" />
+        <Brick column="15" type="2" />
+        <Brick column="16" type="1" />
+        <Brick column="17" type="2" />
+        <Brick column="18" type="1" />
+        <Brick column="19" type="2" />
+      </Bricks>
+    </Row>
+
+    <Row id="7">
+      <Bricks>
+        <Brick column="0" type="2" />
+        <Brick column="1" type="1" />
+        <Brick column="2" type="2" />
+        <Brick column="3" type="1" />
+        <Brick column="4" type="2" />
+        <Brick column="5" type="1" />
+        <Brick column="6" type="2" />
+        <Brick column="7" type="1" />
+        <Brick column="8" type="100" />
+        <Brick column="9" type="100" />
+        <Brick column="10" type="100" />
+        <Brick column="11" type="100" />
+        <Brick column="12" type="2" />
+        <Brick column="13" type="1" />
+        <Brick column="14" type="2" />
+        <Brick column="15" type="1" />
+        <Brick column="16" type="2" />
+        <Brick column="17" type="1" />
+        <Brick column="18" type="2" />
+        <Brick column="19" type="1" />
+      </Bricks>
+    </Row>
+
+    <Row id="8">
+      <Bricks>
+        <Brick column="0" type="1" />
+        <Brick column="1" type="2" />
+        <Brick column="2" type="1" />
+        <Brick column="3" type="2" />
+        <Brick column="4" type="1" />
+        <Brick column="5" type="2" />
+        <Brick column="6" type="1" />
+        <Brick column="7" type="2" />
+        <Brick column="8" type="1" />
+        <Brick column="9" type="2" />
+        <Brick column="10" type="1" />
+        <Brick column="11" type="2" />
+        <Brick column="12" type="1" />
+        <Brick column="13" type="2" />
+        <Brick column="14" type="1" />
+        <Brick column="15" type="2" />
+        <Brick column="16" type="1" />
+        <Brick column="17" type="2" />
+        <Brick column="18" type="1" />
+        <Brick column="19" type="2" />
+      </Bricks>
+    </Row>
+
+    <Row id="9">
+      <Bricks>
+        <Brick column="0" type="2" />
+        <Brick column="1" type="1" />
+        <Brick column="2" type="2" />
+        <Brick column="3" type="1" />
+        <Brick column="4" type="2" />
+        <Brick column="5" type="1" />
+        <Brick column="6" type="2" />
+        <Brick column="7" type="1" />
+        <Brick column="8" type="2" />
+        <Brick column="9" type="1" />
+        <Brick column="10" type="2" />
+        <Brick column="11" type="1" />
+        <Brick column="12" type="2" /> <!-- This is the first destroyed brick -->
+        <Brick column="13" type="1" />
+        <Brick column="14" type="2" />
+        <Brick column="15" type="1" />
+        <Brick column="16" type="2" />
+        <Brick column="17" type="1" />
+        <Brick column="18" type="2" />
+        <Brick column="19" type="1" />
+      </Bricks>
+    </Row>
+
+  </Rows>
+</Level>

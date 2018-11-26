@@ -15,7 +15,7 @@ class BrickManager:
         if random_level:
             self.generate_random_bricks(20, 10)
         else:
-            self.generate_bricks_from_xml("Level1.xml")
+            self.generate_bricks_from_xml("Levels\Level1.xml")
 
     def initialize_brick_size(self, columns, rows):
         width = (self.screen_width - 2 * constants.SCREEN_MARGIN - (columns + 1) * constants.BRICK_DISTANCE) / columns
@@ -43,8 +43,8 @@ class BrickManager:
             parsed_bricks = []
             for row in rows["Row"]:
                 row_number = int(row["@id"])
-                blocks = row["Blocks"]
-                for block in blocks["Block"]:
+                blocks = row["Bricks"]
+                for block in blocks["Brick"]:
                     column_number = int(block["@column"])
                     block_type = int(block["@type"])
                     parsed_bricks.append((row_number, column_number, block_type))
