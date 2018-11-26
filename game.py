@@ -4,6 +4,7 @@ import constants
 from brick_manager import BrickManager
 from brick import BrickTypes
 from ball import Ball
+from colors import pygame_colors, Colors
 
 
 class Game:
@@ -71,14 +72,14 @@ class Game:
         self.ball.bounce()
 
     def draw_screen(self):
-        self.screen.fill(pygame.Color("grey"))
+        self.screen.fill(pygame_colors[Colors.LIGHT_GREY])
         for border in self.borders:
-            pygame.draw.rect(self.screen, pygame.Color("grey60"), border)
+            pygame.draw.rect(self.screen, pygame_colors[Colors.GREY], border)
         for brick in self.brickManager.bricks:
             if brick.type != BrickTypes.DESTROYED:
                 pygame.draw.rect(self.screen, brick.color, brick.rect)
-        pygame.draw.rect(self.screen, pygame.Color("red"), self.player)
-        pygame.draw.rect(self.screen, pygame.Color("green"), self.ball.rect)
+        pygame.draw.rect(self.screen, pygame_colors[Colors.RED], self.player)
+        pygame.draw.rect(self.screen, pygame_colors[Colors.GREEN], self.ball.rect)
         pygame.display.flip()
 
     def main_loop(self):

@@ -1,5 +1,6 @@
 import pygame
 from enum import Enum
+from colors import pygame_colors, Colors
 
 
 class BrickTypes(Enum):
@@ -15,7 +16,6 @@ class Brick:
         self.type = BrickTypes(type_id)
         self.color = self.color[self.type]
 
-    color = {BrickTypes.DESTROYED: pygame.Color("grey"),
-             BrickTypes.LIGHT: pygame.Color("orange"),
-             BrickTypes.DARK: pygame.Color("darkorange"),
-             BrickTypes.SOLID: pygame.Color("dodgerblue")}
+    color = {BrickTypes.LIGHT: pygame_colors[Colors.YELLOW],
+             BrickTypes.DARK: pygame_colors[Colors.ORANGE],
+             BrickTypes.SOLID: pygame_colors[Colors.BLUE]}
