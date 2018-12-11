@@ -16,3 +16,4 @@ class Brick:
         self.rect = pygame.Rect(x, y, width, height)
         self.type = BrickTypes(type_id)
         self.color = pygame_colors[Colors(color_id)]
+        self.is_hittable = self.type != BrickTypes.DESTROYED and self.type != BrickTypes.SOLID
