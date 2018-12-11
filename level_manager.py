@@ -2,26 +2,26 @@ import random
 import xmltodict
 import constants
 from brick import Brick
+from level_loader import LevelLoader
 
 
 class LevelManager:
+    level_loader = None
     brick_width = None
     brick_height = None
     bricks = []
 
     def __init__(self, resolution, random_level):
-        self.screen_width = resolution[0]
-        self.screen_height = resolution[1]
+        self.level_loader = LevelLoader(resolution)
         if random_level:
             self.generate_random_bricks(20, 10)
         else:
             self.generate_bricks_from_xml("Levels\Level1.xml")
 
     def initialize_brick_size(self, columns, rows):
-        width = (self.screen_width - 2 * constants.SCREEN_MARGIN - (columns + 1) * constants.BRICK_DISTANCE) / columns
-        height = ((self.screen_height / 3) - constants.SCREEN_MARGIN - (rows + 1) * constants.BRICK_DISTANCE) / rows
-        self.brick_width = int(width)
-        self.brick_height = int(height)
+        self.level_loader.initialize_brick_size(columns, rows)
+        self.brick_height = self.level_loader.brick_height
+        self.brick_width = self.level_loader.brick_width
 
     def append_brick(self, column, row, color_id, type_id):
         self.bricks.append(Brick(constants.SCREEN_MARGIN + column * (self.brick_width + constants.BRICK_DISTANCE),
