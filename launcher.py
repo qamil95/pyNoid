@@ -49,9 +49,9 @@ class Launcher:
         print(">>> " + ("Random" if self.random_level else "XML") + " level would be used")
 
     def set_input_method(self):
-        method = input("1 - mouse, 2 - keyboard (default - keyboard): ")
+        method = input("1 - keyboard, 2 - mouse (default - mouse): ")
         if method == "1":
-            self.mouse_input = True
-        else:
             self.mouse_input = False
+        else:
+            self.mouse_input = True
         print(">>> " + ("Mouse" if self.mouse_input else "Keyboard") + " input would be used")
