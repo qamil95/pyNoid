@@ -7,7 +7,7 @@ class LevelManager:
         if random_level:
             self.level_loader.load_random_level(20, 10)
         else:
-            self.level_loader.load_xml_level("Levels\Level1.xml")
+            self.level_loader.load_xml_level(r"Levels\Level1.xml")
         self.bricks = self.level_loader.level.bricks
 
     def initialize_brick_size(self, columns, rows):
