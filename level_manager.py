@@ -35,7 +35,7 @@ class LevelManager:
         self.initialize_brick_size(columns, rows)
         for x in range(columns):
             for y in range(rows):
-                self.append_brick(x, y, random.randint(1, 2))
+                self.append_brick(x, y, random.randint(0, 14), random.randint(1, 2))
 
     def generate_bricks_from_xml(self, file_path):
         with open(file_path) as fd:
