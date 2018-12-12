@@ -7,7 +7,6 @@ class Level:
         self.brick_width = width
         self.brick_height = height
         self.bricks = []
-        self.bricks_to_hit = 0
 
     def append_brick(self, column, row, color_id, type_id):
         brick = Brick(constants.SCREEN_MARGIN + column * (self.brick_width + constants.BRICK_DISTANCE),
@@ -17,5 +16,6 @@ class Level:
                       color_id,
                       type_id)
         self.bricks.append(brick)
-        if brick.is_hittable:
-            self.bricks_to_hit += 1
+
+    def bricks_to_hit(self):
+        return sum(brick.is_hittable() for brick in self.bricks)

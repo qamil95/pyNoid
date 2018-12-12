@@ -89,3 +89,4 @@ class Game:
             self.handle_input()
             self.calculate_state()
             self.draw_screen()
+            print(f"{self.level_manager.level_loader.level.bricks_to_hit()}")
